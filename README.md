@@ -18,9 +18,7 @@ This project is a simple command-line Python application designed to evaluate th
 2.	Save the project code into a file, for example, password_strength_checker.py.
 3.	Open a terminal or command prompt.
 4.	Navigate to the directory containing the script.
-5.	Run the script by executing:
-# text
-python password_strength_checker.py
+5.	Run the script by executing: text python password_strength_checker.py
 6.	Follow the on-screen prompts to enter a password and get strength feedback.
 # Instructions for Testing
 1.	Run the program.
