@@ -1,67 +1,53 @@
-# VITYARTHI_PROJECT_PASSWORD_STRENGTH_DETECTION
+Project Title: Password Strength Checker in Python
+Overview
+This project is a simple command-line Python application designed to evaluate the strength of a user’s password. It checks for common security criteria such as length, the presence of uppercase and lowercase letters, digits, and special characters. The program provides actionable feedback for improving weak passwords and allows multiple attempts to achieve a strong password.
 
-🔐 Python Password Strength Checker
+Features
+Validates password length (minimum 8 characters)
 
-This is a simple, standalone graphical application built using Python's tkinter library. It allows users to input a password and instantly assesses its strength based on a set of common security criteria, providing real-time feedback on how to improve it.
+Checks for uppercase letters (A-Z)
 
-✨ Features
+Checks for lowercase letters (a-z)
 
-Real-time Assessment: Instantly checks the strength of the entered password.
+Checks for numeric digits (0-9)
 
-Detailed Feedback: Provides actionable steps and criteria that the password is missing (e.g., "Add special characters").
+Checks for special characters like !, @, #, $, etc.
 
-Password Masking: The password input field masks the characters by default (show="*").
+Rates password strength as WEAK, MEDIUM, or STRONG
 
-Visibility Toggle: Includes a "Show Password" checkbox to easily toggle character visibility for checking input accuracy.
+Provides tailored suggestions to improve password strength
 
-🛠 Strength Criteria
+Allows configurable retry attempts until a strong password is entered
 
-The password is scored out of 5, with each criterion adding 1 point to the score:
+Tools Used
+Python 3.x: Programming language for the application
 
-Minimum Length: Must be at least 8 characters long.
+Any standard Python environment or IDE (such as VS Code, PyCharm, or command line)
 
-Uppercase Letters: Must contain at least one uppercase letter (A-Z).
+Installation and Running the Project
+Ensure Python 3.x is installed on your machine. You can download it from python.org.
 
-Lowercase Letters: Must contain at least one lowercase letter (a-z).
+Save the project code into a file, for example, password_strength_checker.py.
 
-Numbers: Must contain at least one digit (0-9).
+Open a terminal or command prompt.
 
-Special Characters: Must contain at least one special character (e.g., !@#$%^&*).
+Navigate to the directory containing the script.
 
-Strength Levels:
-| Score | Status | Color |
-| :---: | :---: | :---: |
-| 5/5 | STRONG PASSWORD | Green |
-| 3-4/5 | MEDIUM STRENGTH | Orange |
-| 0-2/5 | WEAK PASSWORD | Red |
+Run the script by executing:
 
-🚀 How to Run
+text
+python password_strength_checker.py
+Follow the on-screen prompts to enter a password and get strength feedback.
 
-1. Requirements
+Instructions for Testing
+Run the program.
 
-This application requires Python 3.x. The tkinter library is usually included with standard Python installations.
+Enter any password you want to test when prompted.
 
-2. Save the Code
+If the password is not strong, the program will ask how many attempts you want to retry.
 
-Save the provided Python code into a single file named password_checker.py.
+Enter a stronger password on each retry attempt until you receive a "STRONG" rating or exhaust your attempts.
 
-3. Execution
+Observe the feedback messages to understand what you can improve in your password.
 
-Open your terminal or command prompt, navigate to the directory where you saved the file, and run the script:
-
-python password_checker.py
-
-
-The graphical user interface (GUI) window will open, ready for you to test your passwords!
-
-💡 Code Structure
-
-The application is structured within a single class, PasswordStrengthChecker, which handles all GUI layout and logic:
-
-__init__(self, root): Sets up the main window and all UI components (labels, entry box, checkbox, buttons).
-
-toggle_password(self): Linked to the checkbox, it changes the show property of the entry field to hide or display the password characters.
-
-check_strength(self): Contains the core logic, using regular expressions (re module) to evaluate the password against the five criteria and calculate the score.
-
-update_ui(self, score, feedback, length): Responsible for updating the result and feedback labels with the appropriate text and color based on the calculated score.
+Test with various passwords to cover different cases (short passwords, passwords lacking uppercase letters, missing digits, etc.).
