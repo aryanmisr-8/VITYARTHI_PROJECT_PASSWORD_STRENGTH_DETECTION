@@ -20,7 +20,7 @@ def password(password_txt):
     else:
         tips.append("Add a lowercase letter or two.")
 
-    # digits (I always forget that these are '0' through '9', lol)
+    
     has_digit = any('0' <= c <= '9' for c in password_txt)  # pointless variable but oh well
     if has_digit:
         score += 1
@@ -44,7 +44,7 @@ def password(password_txt):
     return grade, tips
 def main():
     used = 0
-    tries = 1 # probably doesn't need to be here, but I like having defaults
+    tries = 1 
 
     # Initial prompt
     user = input("Alright, type a password and let’s check its strength: ")
@@ -58,7 +58,7 @@ def main():
             print("Oops, that's not a number. I’ll just give you one more try . ")
             tries = 1
 
-    # Loop through retries
+    
     
     while lvl != "STRONG" and used < tries:
         print(f"Password Strength: {lvl}")
@@ -68,7 +68,7 @@ def main():
                 print("-", a)
         used += 1
 
-        # unnecessary f-string but I think it looks nice
+        
         user_pwd = input(f"Try #{used}: Enter a stronger password: ")
         lvl, advice = password(user_pwd)
 
